@@ -1,21 +1,33 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 export const theme = createTheme({
-    typography: {
-        fontFamily: 'Montserrat, sans-serif',
-    },
     palette: {
         type: 'dark',
         primary: {
           main: '#232323',
+          navy: '#0a192f'
         },
         secondary: {
           main: '#ffffff',
+          turquoise: '#64ffda',
+          blueGrey: '#ccd6f6'
         },
     },
     typography: {
+        fontFamily: [
+          'Montserrat',
+          'sans-serrif',
+        ].join(','),
+        h1: {
+          color: '#fff',
+          fontSize: '80px'
+        },
+        h2: {
+          color: '#fff'
+        },
         h3: {
             fontSize: '3rem',
+            color: '#fff',
             '@media (max-width: 250px)': {
                 fontSize: '1rem',
               },
@@ -29,8 +41,19 @@ export const theme = createTheme({
                 fontSize: '3rem',
               },
         },
-        h2: {
-
+        h4: {
+          color: '#fff'
+        },
+        h5: {
+          color: '#fff',
+          fontFamily: [
+            'Fira Code', 'monospace',
+          ].join(','),
+        },
+        navTabs: {
+          fontFamily: [
+            'Fira Code', 'monospace',
+          ].join(','),
         }
     }
 });
