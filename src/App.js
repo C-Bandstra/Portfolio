@@ -7,65 +7,62 @@ import Typography from '@mui/material/Typography';
 import { ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter } from 'react-router-dom'
 import { theme } from './theme'
-import { Height } from '@mui/icons-material';
 
 const Portfolio = () => {
 
   const styles = {
     appBar: {
-      width: '100vw'
+      width: '100vw',
+      backgroundColor: theme.palette.primary.navy,
+      fontFamily: 'Montserrat',
+      boxShadow: '0px 0px 0px 0px',
+      
     },
     landingBox: {
-      // '& .MuiBox-root': {
-        border: '1px solid black',
-        padding: '10px'
-       
-      // }
+      padding: '10px'
     },
     box: {
-      // '& .MuiBox-root': {
-      // }
-      // backgroundColor: '#000000',
-      border: '1px solid black',
-      height: '50vh',
+      height: '85vh',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
       textAlign: 'left',
+      backgroundColor: theme.palette.primary.navy,
       pr: '25vw'
     },
-    landingText: {
-      // fontFamily: 'Montserrat, sans-serif',
+    landingTextSmall: {
+      color: theme.palette.secondary.turquoise,
+    },
+    landingTextBig: {
+      color: theme.palette.secondary.blueGrey,
     },
   }
 
-  // theme.typography.h3 = {
-  //   fontSize: '1.2rem',
-  //   '@media (min-width:600px)': {
-  //     fontSize: '1.5rem',
-  //   },
-  //   [theme.breakpoints.up('md')]: {
-  //     fontSize: '2rem',
-  //   },
+  // theme.typography.landingText = {
+    // fontSize: '1.2rem',
+    // '@media (min-width:600px)': {
+    //   fontSize: '1.5rem',
+    // },
+    // [theme.breakpoints.up('md')]: {
+    //   fontSize: '2rem',
+    // },
+    // fontFamily
   // };
 
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        {/* <Box sx={styles.box}> */}
-          <AppBar position='sticky' sx={styles.appBar} color="secondary">
+          <AppBar position='sticky' sx={styles.appBar}>
             <NavBar />
           </AppBar>
           <Box sx={styles.box}>
             <Box sx={styles.landingBox}>
-              <Typography variant="h3" sx={[styles.landingText, ]}>Hi, my name is</Typography>
-              <Typography variant="h3" sx={[styles.landingText,]}>Charlie Bandstra</Typography>
-              <Typography variant="h3" sx={[styles.landingText,]}>I build stuff on the web</Typography>
-              <Typography variant="h3" sx={[styles.landingText,]}>Look up Brittany Chiang's portfolio</Typography>
+              <Typography variant="h5" sx={[styles.landingTextSmall,]}>Hi, my name is</Typography>
+              <Typography variant="h1" sx={[styles.landingTextBig,]}>Charlie Bandstra.</Typography>
+              <Typography variant="h1" sx={[styles.landingTextBig,]}>Let's get in touch</Typography>
             </Box>
           </Box>
-        {/* </Box> */}
       </ThemeProvider>
     </BrowserRouter>
   );
