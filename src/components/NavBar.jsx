@@ -3,7 +3,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { Link as RouterLink } from "react-router-dom";
-import { theme } from './theme';
+import { theme } from '../styles/theme';
 
 const NavBar = () => {
   const styles = {

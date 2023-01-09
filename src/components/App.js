@@ -1,4 +1,3 @@
-import './App.css';
 import NavBar from './NavBar';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -6,7 +5,7 @@ import Typography from '@mui/material/Typography';
 // import { black, white } from '@mui/material/colors';
 import { ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter } from 'react-router-dom'
-import { theme } from './theme'
+import { theme } from '../styles/theme'
 
 const Portfolio = () => {
 
@@ -19,9 +18,11 @@ const Portfolio = () => {
       
     },
     landingBox: {
-      padding: '10px'
+      padding: '10px',
     },
     box: {
+      borderBottom: "10px solid",
+      borderColor: theme.palette.secondary.turquoise,
       height: '85vh',
       display: 'flex',
       flexDirection: 'column',
@@ -60,7 +61,7 @@ const Portfolio = () => {
             <Box sx={styles.landingBox}>
               <Typography variant="h5" sx={[styles.landingTextSmall,]}>Hi, my name is</Typography>
               <Typography variant="h1" sx={[styles.landingTextBig,]}>Charlie Bandstra.</Typography>
-              <Typography variant="h1" sx={[styles.landingTextBig,]}>Let's get in touch</Typography>
+              <Typography variant="h1" sx={[styles.landingTextBig,]}>Let's build something cool.</Typography>
             </Box>
           </Box>
       </ThemeProvider>
