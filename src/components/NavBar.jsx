@@ -33,7 +33,7 @@ const NavBar = () => {
     }
     
   }
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(false);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
