@@ -1,6 +1,16 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 export const theme = createTheme({
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 900,
+        mdlg: 1050,
+        lg: 1200,
+        xl: 1536,
+      },
+    },
     palette: {
         type: 'dark',
         primary: {
@@ -20,7 +30,19 @@ export const theme = createTheme({
         ].join(','),
         h1: {
           color: '#fff',
-          fontSize: '80px'
+          fontSize: '80px',
+          '@media (max-width: 250px)': {
+            fontSize: '1rem',
+          },
+          '@media (min-width: 250px)': {
+              fontSize: '1rem',
+            },
+          '@media (min-width: 500px)': {
+              fontSize: '2rem',
+            },
+          '@media (min-width: 800px)': {
+              fontSize: '3rem',
+            },
         },
         h2: {
           color: '#fff'
@@ -28,18 +50,6 @@ export const theme = createTheme({
         h3: {
             fontSize: '3rem',
             color: '#fff',
-            '@media (max-width: 250px)': {
-                fontSize: '1rem',
-              },
-            '@media (min-width: 250px)': {
-                fontSize: '1rem',
-              },
-            '@media (min-width: 500px)': {
-                fontSize: '2rem',
-              },
-            '@media (min-width: 800px)': {
-                fontSize: '3rem',
-              },
         },
         h4: {
           color: '#fff'
